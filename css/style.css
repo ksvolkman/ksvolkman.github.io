@@ -1,0 +1,32 @@
+body {
+	width: 100%;
+	font-family: arial;
+	font-size: 16px;
+
+}
+
+header {
+	text-align: center;
+	height:450px;
+	background: url("../images/toms-restaurant.jpg");
+	background-size: cover;
+	color: #fff;
+}
+
+#reservations {
+	text-align: center;
+}
+
+#makeReservations {
+	float: left;
+	width: 50%;
+}
+
+#existingReservations {
+	float: right;
+	width: 50%;
+}
+
+.clear {
+	clear: both;
+}

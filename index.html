@@ -1,19 +1,73 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html>
 <head>
 	<meta charset="utf-8">
-	<title>Karen's Site</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Tom's Restaurant</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<h1>Hello world! Making edits.</h1>
-
-
-
-
+	<header>
+		<h1>Tom's Restaurant</h1>
+		<h2>&quot;The Place to Be&quot;</h2>
+		<!--<img src="images/toms-restaurant.jpg" alt="Tom's Restaurant"/>-->
+	</header>
 	
+	<section id="reservations">
+		<div id="makeReservations">
+			<h3>Make a Reservation</h3>
+			<form>
+				Name: <input type="text" name="fullname" placeholder="Enter Full Name" >
+				<br><br>
+				Day: <input type="text" name="day" placeholder="Enter Day of Week" >
+				<br><br>
+				<button>Confirm Reservation</button>
+			</form>
+		</div>
+		<div id="existingReservations">
+			<h3>Existing Reservations</h3>
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Day</th>
+			</thead>
+			<tbody>[Form data will publish here]</tbody>
+		</table>
+		</div>
+		<div class="clear"></div>
+	</section>
+
+	<section id="restaurantMap">
+		<h3>Come Dine with Us</h3>
+		 <div id="map"></div>
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 40.8054491, lng: -73.9654415 },
+                zoom: 8
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2cvKNhUlRcKNKFi0zf_fi3kLL14VKWns&callback=initMap" async defer></script>
+    
+	</section>
+	<section id="reviews">
+		<h3>Customer Reviews</h3>
+		<div class="left">
+			<img src="images/jerry.jpg" alt="Tom's Restaurant"/>
+		</div>
+		<div class="right">
+			<textarea name="comment" form="usrform" placeholder="Enter review here..."></textarea>
+			<form id="userform">
+				Name: <input type="text" name="username" placeholder="Enter name"><br>
+				<button>Submit Review</button>
+			</form>
+		</div>
+	</section>
+
+
 	<script src="js/jquery-3.0.0.js"></script>
-	<script src="js/handlebars-v4.0.5.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
