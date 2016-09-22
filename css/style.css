@@ -1,32 +1,106 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height:100%;
+}
+
 body {
 	width: 100%;
 	font-family: arial;
 	font-size: 16px;
-
 }
 
-header {
+h1 {
+	font-size: 4em;
+	color: red;
+}
+
+h2 {
+	font-size: 3em;
+	color: red;
+}
+
+h3 {
+	font-size: 2em;
 	text-align: center;
+}
+
+p {
+	font-size: 1.5em;
+}
+
+
+#map {
+    height: 100%;
+}
+
+.header-image {
 	height:450px;
 	background: url("../images/toms-restaurant.jpg");
 	background-size: cover;
-	color: #fff;
+	opacity: 0.3;
+	position: relative;
+	z-index: -1;
 }
+
+.header-content {
+	position: absolute;
+	z-index: 1;
+	text-align: center;
+	top: 5%;
+	left: 37%;
+}
+
 
 #reservations {
 	text-align: center;
+	width: 60%;
+	margin-left: 20%;
 }
 
 #makeReservations {
 	float: left;
-	width: 50%;
+	width: 400px;
 }
 
 #existingReservations {
 	float: right;
-	width: 50%;
+	width: 400px;
+}
+
+table, th, td, tbody {
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+	vertical-align: middle;
+}
+
+table {
+	width: 400px;
+	table-layout: fixed;
+}
+
+td {
+	height: 50px;
 }
 
 .clear {
 	clear: both;
 }
+
+#reviews {
+	width: 60%;
+	margin-left: 20%;
+}
+
+.left {
+	float: left;
+	width: 400px;
+}
+
+.right {
+	float: right;
+	width: 400px;
+}
+
+
