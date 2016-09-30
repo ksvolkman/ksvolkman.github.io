@@ -1,3 +1,8 @@
+$(function() {
+    getReservations();
+} );
+
+
 // Step 1: Initialize Firebase
 var config = {
     apiKey: "AIzaSyCsgtuaeSmFJv_blSRdZsSMfxLPzoI_iYE",
@@ -36,8 +41,9 @@ $('.reservation-form').on('submit', function (event) {
 // Step 6: create function getReservations, listen for changes to firebase datasbase, update view using Handlebars
 function getReservations() {
     database.ref('reservations').on('value', function (results) {
+        
         var allReservations = results.val();
-        $('.reservations').empty();
+        $('.reservation-list').empty();
 
         for (var reservation in allReservations) {
             var context = {
@@ -49,7 +55,7 @@ function getReservations() {
             var source = $('#reservation-template').html();
             var template = Handlebars.compile(source);
             var reservationListItem = template(context);
-            $('.reservations').append(reservationListItem);
+            $('.reservation-list').append(reservationListItem);
         }
     });
 }
